@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Operation.h"
 
-@interface Sub : Operation
-
+@interface Sub : NSObject <Operation>
 @end

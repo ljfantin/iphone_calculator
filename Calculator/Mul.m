@@ -10,4 +10,10 @@
 
 @implementation Mul
 
+- (NSDecimalNumber *) doOperation:(NSDecimalNumber *) firstOperand secondOperand:(NSDecimalNumber *) secondOperand   {
+    
+    return [firstOperand decimalNumberByMultiplyingBy:secondOperand];
+}
+
+
 @end

@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Operation.h"
 
-@interface Mul : Operation
+@interface Mul : NSObject<Operation>
+
 
 @end

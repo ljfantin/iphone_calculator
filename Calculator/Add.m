@@ -10,4 +10,10 @@
 
 @implementation Add
 
+
+- (NSDecimalNumber *) doOperation:(NSDecimalNumber *) firstOperand secondOperand:(NSDecimalNumber *) secondOperand   {
+    
+    return [firstOperand decimalNumberByAdding:secondOperand];
+}
+
 @end

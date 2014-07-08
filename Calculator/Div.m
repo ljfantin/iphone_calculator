@@ -10,4 +10,9 @@
 
 @implementation Div
 
+- (NSDecimalNumber *) doOperation:(NSDecimalNumber *) firstOperand secondOperand:(NSDecimalNumber *) secondOperand   {
+    
+    return [firstOperand decimalNumberByDividingBy:secondOperand];
+}
+
 @end

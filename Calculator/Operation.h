@@ -10,4 +10,5 @@
 
 @protocol Operation <NSObject>
 
+    - (NSDecimalNumber *) doOperation:(NSDecimalNumber *) firstOperand secondOperand:(NSDecimalNumber *) secondOperand;
 @end

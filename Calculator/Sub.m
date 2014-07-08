@@ -10,4 +10,9 @@
 
 @implementation Sub
 
+- (NSDecimalNumber *) doOperation:(NSDecimalNumber *) firstOperand secondOperand:(NSDecimalNumber *) secondOperand   {
+    
+    return [firstOperand decimalNumberBySubtracting:secondOperand];
+}
+
 @end

@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Operation.h"
 
-@interface Div : Operation
+@interface Div : NSObject <Operation>
 
 @end
