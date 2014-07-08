@@ -22,19 +22,28 @@
 }
 
 - (NSDecimalNumber *) add:(NSDecimalNumber *) firstOperand secondOperand:(NSDecimalNumber *) secondOperand    {
-    return [_addOperation doOperation:firstOperand secondOperand:secondOperand];
+    
+    NSDecimalNumber * result = [_addOperation doOperation:firstOperand secondOperand:secondOperand];
+    NSLog(@"ADD[op1 = %@, op2=%@] = %@",firstOperand,secondOperand,result);
+    return result;
 }
 
 - (NSDecimalNumber *) sub:(NSDecimalNumber *) firstOperand secondOperand:(NSDecimalNumber *) secondOperand    {
-    return [_subOperation doOperation:firstOperand secondOperand:secondOperand];
+    NSDecimalNumber * result = [_subOperation doOperation:firstOperand secondOperand:secondOperand];
+    NSLog(@"SUB[op1 = %@, op2=%@] = %@",firstOperand,secondOperand,result);
+    return result;
 }
 
 - (NSDecimalNumber *) div:(NSDecimalNumber *) firstOperand secondOperand:(NSDecimalNumber *) secondOperand    {
-    return [_divOperation doOperation:firstOperand secondOperand:secondOperand];
+    NSDecimalNumber * result = [_divOperation doOperation:firstOperand secondOperand:secondOperand];
+    NSLog(@"DIV[op1 = %@, op2=%@] = %@",firstOperand,secondOperand,result);
+    return result;
 }
 
 - (NSDecimalNumber *) mul:(NSDecimalNumber *) firstOperand secondOperand:(NSDecimalNumber *) secondOperand    {
-    return [_mulOperation doOperation:firstOperand secondOperand:secondOperand];
+    NSDecimalNumber * result = [_mulOperation doOperation:firstOperand secondOperand:secondOperand];
+    NSLog(@"MUL[op1 = %@, op2=%@] = %@",firstOperand,secondOperand,result);
+    return result;
 }
 
 - (void) dealloc {
