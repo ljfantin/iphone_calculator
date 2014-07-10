@@ -13,10 +13,11 @@
 #import "Div.h"
 
 @interface Calculator : NSObject    {
-    Add * _addOperation;
-    Sub * _subOperation;
-    Div * _divOperation;
-    Mul * _mulOperation;
+    //extension
+    //Add * _addOperation;
+    //Sub * _subOperation;
+    //Div * _divOperation;
+    //Mul * _mulOperation;
 }
 
 //@property (nonatomic,retain) Add * addOperation;

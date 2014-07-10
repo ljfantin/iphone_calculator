@@ -8,6 +8,14 @@
 
 #import "Calculator.h"
 
+@interface Calculator ()
+    @property (nonatomic,retain) Add * addOperation;
+    @property (nonatomic,retain) Sub * subOperation;
+    @property (nonatomic,retain) Mul * mulOperation;
+    @property (nonatomic,retain) Div * divOperation;
+@end
+
+
 @implementation Calculator
 
 - (id)init  {
