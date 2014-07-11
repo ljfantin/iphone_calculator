@@ -7,7 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "Calculator.h"
+#import "Calculator.m"
 
 
 @interface CalculatorTests : XCTestCase {
@@ -96,7 +96,6 @@ Calculator * _calculator;
     NSDecimalNumber * resultExpected = [NSDecimalNumber decimalNumberWithString:@"150"];
     
     XCTAssertEqualObjects(result, resultExpected, @"La operacion mul devuelve un valor incorrecto");
-    
     //[operator1 release];
     //[operator2 release];
     //[result release];
