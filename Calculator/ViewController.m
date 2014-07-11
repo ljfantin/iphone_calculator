@@ -7,9 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "Calculator.h"
 
 @interface ViewController ()
 
+    @property Calculator * calculator;
 @end
 
 @implementation ViewController
@@ -29,8 +31,8 @@
 
 - (void)orientationChanged:(NSNotification *)notification
 {
-    UIDeviceOrientation deviceOrientation = [UIDevice currentDevice].orientation;
-    
+    //UIDeviceOrientation deviceOrientation = [UIDevice currentDevice].orientation;
+    //NSLog(@"Orientacion %@",deviceOrientation);
     /*if (UIDeviceOrientationIsLandscape(deviceOrientation) &&
         !isShowingLandscapeView)
     {
@@ -43,6 +45,17 @@
         [self dismissViewControllerAnimated:YES completion:nil];
         isShowingLandscapeView = NO;
     }*/
+}
+
+# pragma mark - UICollectionViewDelegate
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    // TODO: Select Item
+    NSLog(@"Entro al metodo");
+}
+- (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {
+    // TODO: Deselect item
+    NSLog(@"Entro al metodo");
 }
 
 @end

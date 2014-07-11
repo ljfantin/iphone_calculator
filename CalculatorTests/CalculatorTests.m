@@ -7,7 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "Calculator.m"
+#import "Calculator.h"
 
 
 @interface CalculatorTests : XCTestCase {
