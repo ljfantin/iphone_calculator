@@ -22,6 +22,11 @@
 		4FE252AA196C219800843478 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FE25289196C219800843478 /* UIKit.framework */; };
 		4FE252B2196C219800843478 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4FE252B0196C219800843478 /* InfoPlist.strings */; };
 		4FE252B4196C219800843478 /* CalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE252B3196C219800843478 /* CalculatorTests.m */; };
+		8B74A9321971A753005A890D /* Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B74A92E1971A753005A890D /* Add.m */; };
+		8B74A9331971A753005A890D /* Div.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B74A92F1971A753005A890D /* Div.m */; };
+		8B74A9341971A753005A890D /* Mul.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B74A9301971A753005A890D /* Mul.m */; };
+		8B74A9351971A753005A890D /* Sub.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B74A9311971A753005A890D /* Sub.m */; };
+		8B74A9371971ACB3005A890D /* Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B74A9361971ACB3005A890D /* Calculator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +48,6 @@
 		4FE2528F196C219800843478 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4FE25291196C219800843478 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4FE25293196C219800843478 /* Calculator-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Calculator-Prefix.pch"; sourceTree = "<group>"; };
-		4FE25294196C219800843478 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4FE25295196C219800843478 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		4FE25298196C219800843478 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		4FE2529B196C219800843478 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
@@ -55,6 +59,18 @@
 		4FE252AF196C219800843478 /* CalculatorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CalculatorTests-Info.plist"; sourceTree = "<group>"; };
 		4FE252B1196C219800843478 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4FE252B3196C219800843478 /* CalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculatorTests.m; sourceTree = "<group>"; };
+		8B74A9251971A643005A890D /* Add.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Add.h; sourceTree = "<group>"; };
+		8B74A9271971A643005A890D /* Calculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Calculator.h; sourceTree = "<group>"; };
+		8B74A9281971A643005A890D /* Div.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Div.h; sourceTree = "<group>"; };
+		8B74A9291971A643005A890D /* Mul.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mul.h; sourceTree = "<group>"; };
+		8B74A92A1971A643005A890D /* Operation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Operation.h; sourceTree = "<group>"; };
+		8B74A92B1971A643005A890D /* Sub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sub.h; sourceTree = "<group>"; };
+		8B74A92D1971A719005A890D /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8B74A92E1971A753005A890D /* Add.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Add.m; sourceTree = "<group>"; };
+		8B74A92F1971A753005A890D /* Div.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Div.m; sourceTree = "<group>"; };
+		8B74A9301971A753005A890D /* Mul.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mul.m; sourceTree = "<group>"; };
+		8B74A9311971A753005A890D /* Sub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sub.m; sourceTree = "<group>"; };
+		8B74A9361971ACB3005A890D /* Calculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Calculator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +130,18 @@
 		4FE2528B196C219800843478 /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
-				4FE25294196C219800843478 /* AppDelegate.h */,
+				8B74A9361971ACB3005A890D /* Calculator.m */,
+				8B74A92E1971A753005A890D /* Add.m */,
+				8B74A92F1971A753005A890D /* Div.m */,
+				8B74A9301971A753005A890D /* Mul.m */,
+				8B74A9311971A753005A890D /* Sub.m */,
+				8B74A92D1971A719005A890D /* AppDelegate.h */,
+				8B74A9251971A643005A890D /* Add.h */,
+				8B74A9271971A643005A890D /* Calculator.h */,
+				8B74A9281971A643005A890D /* Div.h */,
+				8B74A9291971A643005A890D /* Mul.h */,
+				8B74A92A1971A643005A890D /* Operation.h */,
+				8B74A92B1971A643005A890D /* Sub.h */,
 				4FE25295196C219800843478 /* AppDelegate.m */,
 				4FE25297196C219800843478 /* Main_iPhone.storyboard */,
 				4FE2529A196C219800843478 /* Main_iPad.storyboard */,
@@ -253,8 +280,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B74A9341971A753005A890D /* Mul.m in Sources */,
+				8B74A9371971ACB3005A890D /* Calculator.m in Sources */,
 				4FE2529F196C219800843478 /* ViewController.m in Sources */,
+				8B74A9321971A753005A890D /* Add.m in Sources */,
+				8B74A9351971A753005A890D /* Sub.m in Sources */,
 				4FE25296196C219800843478 /* AppDelegate.m in Sources */,
+				8B74A9331971A753005A890D /* Div.m in Sources */,
 				4FE25292196C219800843478 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -390,6 +422,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Calculator/Calculator-Prefix.pch";
 				INFOPLIST_FILE = "Calculator/Calculator-Info.plist";
@@ -403,6 +436,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Calculator/Calculator-Prefix.pch";
 				INFOPLIST_FILE = "Calculator/Calculator-Info.plist";
@@ -470,6 +504,7 @@
 				4FE252B9196C219800843478 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4FE252BA196C219800843478 /* Build configuration list for PBXNativeTarget "CalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -478,6 +513,7 @@
 				4FE252BC196C219800843478 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
