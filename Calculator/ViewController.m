@@ -7,11 +7,11 @@
 //
 
 #import "ViewController.h"
-#import "Calculator.h"
 
 @interface ViewController ()
 
     @property Calculator * calculator;
+
 @end
 
 @implementation ViewController
@@ -20,6 +20,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    [self.collectionView registerClass:[Cell class] forCellWithReuseIdentifier:@"calculatorCell"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -47,15 +48,45 @@
     }*/
 }
 
-# pragma mark - UICollectionViewDelegate
+#pragma mark - Implementacion protocolo UICollectionViewDatasource
+// 1
+- (NSInteger)collectionView:(UICollectionView *)view numberOfItemsInSection:(NSInteger)section {
+    return 16;
+}
+// 2
+- (NSInteger)numberOfSectionsInCollectionView: (UICollectionView *)collectionView {
+    return 1;
+}
+// 3
+- (UICollectionViewCell *)collectionView:(UICollectionView *)cv cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    Cell *cell = [cv dequeueReusableCellWithReuseIdentifier:@"calculatorCell" forIndexPath:indexPath];
+    //cell.backgroundColor = [UIColor whiteColor];
+    return cell;
+}
+
+#pragma mark - Implementacion protocolo UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     // TODO: Select Item
-    NSLog(@"Entro al metodo");
 }
 - (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {
     // TODO: Deselect item
-    NSLog(@"Entro al metodo");
 }
 
+#pragma mark – Implementacion protocolo UICollectionViewDelegateFlowLayout
+// 1
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    //NSString *searchTerm = self.searches[indexPath.section]; FlickrPhoto *photo =
+    //self.searchResults[searchTerm][indexPath.row];
+    // 2
+    //CGSize retval = photo.thumbnail.size.width &gt; 0 ? photo.thumbnail.size : CGSizeMake(100, 100);
+    //retval.height += 35; retval.width += 35; return retval;
+    return CGSizeMake(80, 80);
+}
+
+// 3
+- (UIEdgeInsets)collectionView:
+(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
+    return UIEdgeInsetsMake(50, 20, 50, 20);
+}
 @end

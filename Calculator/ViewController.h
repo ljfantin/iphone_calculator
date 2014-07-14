@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Calculator.h"
+#import "Cell.h"
+@interface ViewController : UIViewController<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 
-@interface ViewController : UIViewController
+    @property (nonatomic,retain) IBOutlet UICollectionView *collectionView;
 
 @end
