@@ -94,7 +94,11 @@ Calculator * _calculator;
     
     NSDecimalNumber * result = [_calculator mul:operator1 secondOperand:operator2];
     NSDecimalNumber * resultExpected = [NSDecimalNumber decimalNumberWithString:@"150"];
-    
+
+    result = [_calculator mul:operator1 secondOperand:operator2];
+    result = [_calculator mul:operator1 secondOperand:operator2];
+    result = [_calculator mul:operator1 secondOperand:operator2];
+
     XCTAssertEqualObjects(result, resultExpected, @"La operacion mul devuelve un valor incorrecto");
     //[operator1 release];
     //[operator2 release];

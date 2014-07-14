@@ -40,6 +40,7 @@
     self.calculator = [[Calculator alloc] init];
     self.textFieldValue = [[NSMutableString alloc] init];
     self.formatter = [[NSNumberFormatter alloc] init];
+    [self.formatter setNumberStyle:NSNumberFormatterDecimalStyle];
 }
 
 - (void)didReceiveMemoryWarning
@@ -154,32 +155,34 @@
 - (void) handleOperation    {
     if (self.operando1 == nil)    {
         //seteo el op 1
-        self.operando1 = [NSDecimalNumber decimalNumberWithString:self.textFieldValue];
+        self.operando1 = [NSDecimalNumber decimalNumberWithString:self.textFieldResult.text];
         //limpio el text field
         [self.textFieldValue setString:@""];
         //self.textFieldResult.text = self.textFieldValue;
     }
     else {
-        //seteo el op 2
-        self.operando2 = [NSDecimalNumber decimalNumberWithString:self.textFieldValue];
-        switch (self.lastOperation) {
+        if ([self.textFieldValue length] != 0) {
+            //seteo el op 2
+            self.operando2 = [NSDecimalNumber decimalNumberWithString:self.textFieldValue];
+            switch (self.lastOperation) {
                 
-            case ADD:self.lastResult = [self.calculator add:_operando1 secondOperand:_operando2]; break;
-            case DIV:self.lastResult = [self.calculator div:_operando1 secondOperand:_operando2]; break;
-            case MUL:self.lastResult = [self.calculator mul:_operando1 secondOperand:_operando2]; break;
-            case SUB:self.lastResult = [self.calculator sub:_operando1 secondOperand:_operando2]; break;
+                case ADD:self.lastResult = [self.calculator add:_operando1 secondOperand:_operando2]; break;
+                case DIV:self.lastResult = [self.calculator div:_operando1 secondOperand:_operando2]; break;
+                case MUL:self.lastResult = [self.calculator mul:_operando1 secondOperand:_operando2]; break;
+                case SUB:self.lastResult = [self.calculator sub:_operando1 secondOperand:_operando2]; break;
                 
+            }
+            self.operando1 = self.lastResult;
+            //le seteo
+            [self.textFieldValue setString:@""];
+            self.textFieldResult.text = [self.formatter stringFromNumber:self.lastResult];
         }
-        self.operando1 = self.lastResult;
-        //le seteo
-        [self.textFieldValue setString:@""];
-        self.textFieldResult.text = [self.formatter stringFromNumber:self.lastResult];
     }
 }
 
 - (IBAction)pushButtonDot:(id)sender {
     NSLog(@"Button Dot");
-    [self.textFieldValue appendString:@","];
+    [self.textFieldValue appendString:@"."];
     self.textFieldResult.text = self.textFieldValue;
 }
 
