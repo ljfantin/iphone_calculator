@@ -14,6 +14,7 @@
     @property (nonatomic,retain) Calculator * calculator;
     @property (nonatomic,retain) NSDecimalNumber * operando1;
     @property (nonatomic,retain) NSDecimalNumber * operando2;
+    @property (nonatomic,retain) NSDecimalNumber * lastResult;
     @property (nonatomic,retain) NSMutableString * textFieldValue;
     @property (nonatomic,retain) NSNumberFormatter * formatter;
 
@@ -156,26 +157,23 @@
         self.operando1 = [NSDecimalNumber decimalNumberWithString:self.textFieldValue];
         //limpio el text field
         [self.textFieldValue setString:@""];
-        self.textFieldResult.text = self.textFieldValue;
+        //self.textFieldResult.text = self.textFieldValue;
     }
     else {
         //seteo el op 2
         self.operando2 = [NSDecimalNumber decimalNumberWithString:self.textFieldValue];
-        //hago la cuenta
-        NSDecimalNumber * result;
         switch (self.lastOperation) {
                 
-            case ADD:result = [self.calculator add:_operando1 secondOperand:_operando2]; break;
-            case DIV:result = [self.calculator div:_operando1 secondOperand:_operando2]; break;
-            case MUL:result = [self.calculator mul:_operando1 secondOperand:_operando2]; break;
-            case SUB:result = [self.calculator sub:_operando1 secondOperand:_operando2]; break;
+            case ADD:self.lastResult = [self.calculator add:_operando1 secondOperand:_operando2]; break;
+            case DIV:self.lastResult = [self.calculator div:_operando1 secondOperand:_operando2]; break;
+            case MUL:self.lastResult = [self.calculator mul:_operando1 secondOperand:_operando2]; break;
+            case SUB:self.lastResult = [self.calculator sub:_operando1 secondOperand:_operando2]; break;
                 
         }
-        //el resultado se lo seteo a operador 1 para que siga operando
-        self.operando1 = result;
+        self.operando1 = self.lastResult;
         //le seteo
         [self.textFieldValue setString:@""];
-        self.textFieldResult.text = [self.formatter stringFromNumber:result];
+        self.textFieldResult.text = [self.formatter stringFromNumber:self.lastResult];
     }
 }
 
@@ -188,6 +186,33 @@
 - (IBAction)pushButtonEqual:(id)sender{
     NSLog(@"Button Equal");
     [self handleOperation];
+    self.operando1 = nil;
+}
+
+- (IBAction)pushButtonC:(id)sender{
+    NSLog(@"Button Equal");
+    //if ([self.operando1 retainCount]>0)
+    //    [self.operando1 retain];
+    self.operando1 = nil;
+    [self.textFieldValue setString:@""];
+    self.textFieldResult.text = self.textFieldValue;
+}
+
+- (void)dealloc    {
+
+    if (self.calculator!=nil)   {
+        [self.calculator release];
+    }
+    
+    if (self.textFieldValue!=nil)   {
+        [self.textFieldValue release];
+    }
+    
+    if (self.formatter!=nil)    {
+        [self.formatter release];
+    }
+    
+    [super dealloc];
 }
 
 @end

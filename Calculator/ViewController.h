@@ -26,4 +26,5 @@
 - (IBAction)pushButtonMul:(id)sender;
 - (IBAction)pushButtonDot:(id)sender;
 - (IBAction)pushButtonEqual:(id)sender;
+- (IBAction)pushButtonC:(id)sender;
 @end
