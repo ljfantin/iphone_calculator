@@ -194,8 +194,6 @@
 
 - (IBAction)pushButtonC:(id)sender{
     NSLog(@"Button Equal");
-    //if ([self.operando1 retainCount]>0)
-    //    [self.operando1 retain];
     self.operando1 = nil;
     [self.textFieldValue setString:@""];
     self.textFieldResult.text = self.textFieldValue;
